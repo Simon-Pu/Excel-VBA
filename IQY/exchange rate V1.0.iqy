@@ -1,0 +1,11 @@
+WEB
+1
+http://www.cnyes.com/forex/history.aspx?fccode=["³f¹ô¥N¸¹"]&mydate=["Date"]&rate=exchange
+
+Selection=4
+Formatting=None
+PreFormattedTextToColumns=True
+ConsecutiveDelimitersAsOne=True
+SingleBlockTextImport=False
+DisableDateRecognition=False
+DisableRedirections=False
