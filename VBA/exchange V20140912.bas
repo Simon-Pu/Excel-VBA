@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "exchange rate"
 Sub exchangeCalculate()
 
     Dim DaysofCount As Integer
@@ -63,13 +63,13 @@ Sub exchangeCalculate()
         Sheets("exchange").Range("C8") = 1
     End If
     If IsEmpty(Sheets("exchange").Range("C9")) Then
-        Sheets("exchange").Range("C9").FormulaR1C1 = "=IF(B9<>"", C8+1)"
-        Sheets("exchange").Range("D9").FormulaR1C1 = "=B9*$D$3+$D$4"
-        Sheets("exchange").Range("E9").FormulaR1C1 = "=B9-D9"
-        Sheets("exchange").Range("F9").FormulaR1C1 = "=D9+(2*$D$5)"
-        Sheets("exchange").Range("G9").FormulaR1C1 = "=D9+$D$5"
-        Sheets("exchange").Range("H9").FormulaR1C1 = "=D9-$D$5"
-        Sheets("exchange").Range("I9").FormulaR1C1 = "=D9-(2*$D$5)"
+        Sheets("exchange").Range("C9").Formula = "=IF(B9<>"", C8+1)"
+        Sheets("exchange").Range("D9").Formula = "=C9*$D$3+$D$4"
+        Sheets("exchange").Range("E9").Formula = "=B9-D9"
+        Sheets("exchange").Range("F9").Formula = "=D9+(2*$D$5)"
+        Sheets("exchange").Range("G9").Formula = "=D9+$D$5"
+        Sheets("exchange").Range("H9").Formula = "=D9-$D$5"
+        Sheets("exchange").Range("I9").Formula = "=D9-(2*$D$5)"
     End If
     
     
@@ -112,7 +112,7 @@ Sub UpdateDrawChart()
     Dim ChartTitleIndex As Integer
     Dim FinalRow As Integer
     
-    
+    Worksheets("exchange").Visible = xlSheetVisible
     新最後一列 = Sheets("exchange").Range("A" & Rows.Count).End(xlUp).Row
     Sheets("exchange").Select
     'Set range from which to determine smallest value
@@ -253,6 +253,7 @@ Sub UpdateDrawChart()
     End If
     
     Sheets("exchange").Cells(2, 11) = (((CDate(Sheets("exchange").Cells(FinalRow, 1))) - (CDate(Sheets("exchange").Cells(8, 1)))) / 365)
+    Worksheets("exchange").Visible = xlSheetHidden
 
 End Sub
 
