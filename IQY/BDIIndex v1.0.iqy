@@ -1,0 +1,11 @@
+WEB
+1
+http://www.cnyes.com/futures/History.aspx?mydate=["Date"]&code=["Index¥N¸¹"]
+
+Selection=3
+Formatting=None
+PreFormattedTextToColumns=True
+ConsecutiveDelimitersAsOne=True
+SingleBlockTextImport=False
+DisableDateRecognition=False
+DisableRedirections=False
